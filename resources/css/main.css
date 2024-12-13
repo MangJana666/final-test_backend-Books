@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.pagination {
+    font-size: 14px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.page li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.page li a {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.page li a:hover {
+    background-color: #f0f0f0;
+}
