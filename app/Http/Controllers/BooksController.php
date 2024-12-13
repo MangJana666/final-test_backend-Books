@@ -9,7 +9,7 @@ class BooksController extends Controller
 {
     public function index(Request $request)
     {
-        $pageLimit = $request->input('page', 10);
+        $pageLimit = $request->input('pageLimit', 10);
         $keyword = $request->input('keyword', '');
 
         // if (!$pageLimit) {

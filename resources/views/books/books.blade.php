@@ -19,7 +19,7 @@
     <div class="row">
     <div class="col-6"><form  action="{{ route('index') }}" method="get" class="input-group mb-2 col-md-2 " style="width: 300px;">
         <label class="input-group-text" for="page">List Show</label>
-        <select name="page" id="page" class="form-select" onchange="this.form.submit()">
+        <select name="pageLimit" id="pageLimit" class="form-select" onchange="this.form.submit()">
           @for ($i = 10; $i <= 100; $i += 10)
               <option value="{{ $i }}" {{ $pageLimit == $i ? 'selected' : '' }}>{{ $i }}</option>
           @endfor
