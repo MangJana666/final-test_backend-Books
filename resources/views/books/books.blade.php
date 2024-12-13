@@ -12,6 +12,31 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <title>List Books Page</title>
   </head>
+  <style>
+    .page {
+        font-size: 14px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    .page li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    
+    .page li a {
+        padding: 5px 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    
+    .page li a:hover {
+        background-color: #f0f0f0;
+    }
+
+
+  </style>
   <body>
     <div class="container mt-5" style="width: 820px">
     <h1 class="mb-4 text-center">Books Data</h1>
@@ -62,6 +87,9 @@
             @endforeach
         </tbody>
       </table>
+      <div class="d-flex container justify-content-center page">
+        {{ $books->appends(['pageLimit' => $pageLimit])->links('pagination::default') }}
+      </div>  
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
